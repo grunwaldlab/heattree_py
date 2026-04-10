@@ -1,6 +1,6 @@
-# Contributing to MyPackage
+# Contributing to heattree-py
 
-Thank you for your interest in contributing to MyPackage! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to heattree_py! This document provides guidelines and instructions for contributing.
 
 ## Getting Started
 
@@ -14,8 +14,8 @@ Thank you for your interest in contributing to MyPackage! This document provides
 1. Fork the repository on GitHub
 2. Clone your fork:
    ```bash
-   git clone https://github.com/yourusername/heattree_py.git
-   cd heattree_py
+    git clone https://github.com/grunwaldlab/heattree_py.git
+    cd heattree_py
    ```
 3. Check [docs/development.md](docs/development.md) for tools and conventions used for this software
 

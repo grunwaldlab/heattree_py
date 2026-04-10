@@ -6,7 +6,7 @@ This document describes the development environment, tools, and workflows for co
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/heattree_py.git
+git clone https://github.com/grunwaldlab/heattree_py.git
 cd heattree_py
 
 # Install hatch (if not already installed)
@@ -146,71 +146,50 @@ pytest
 ### Test File Structure
 
 ```python
-# tests/test_core.py
-import pytest
-from heattree_py.core import add, greet
-
-
-class TestAdd:
-    """Tests for the add function."""
-
-    def test_add_integers(self):
-        """Test adding two integers."""
-        assert add(1, 2) == 3
-
-    def test_add_floats(self):
-        """Test adding two floats."""
-        assert add(1.5, 2.5) == 4.0
-
-    @pytest.mark.parametrize(
-        ("a", "b", "expected"),
-        [
-            (1, 2, 3),
-            (0, 0, 0),
-            (-1, 1, 0),
-        ],
-    )
-    def test_add_parametrized(self, a, b, expected):
-        """Test add with multiple inputs."""
-        assert add(a, b) == expected
-
-
-class TestGreet:
-    """Tests for the greet function."""
-
-    def test_greet_default(self):
-        """Test greeting with default value."""
-        result = greet("World")
-        assert result == "Hello, World!"
-
-    @pytest.mark.slow
-    def test_greet_slow_operation(self):
-        """A slower test marked for selective running."""
-        # This test can be skipped with: hatch run test -m "not slow"
-        ...
-```
-
-### Fixtures
-
-Define reusable test fixtures in `tests/conftest.py`:
-
-```python
-# tests/conftest.py
+# tests/test_widget.py
+import pandas as pd
 import pytest
 
-
-@pytest.fixture
-def sample_data():
-    """Provide sample data for tests."""
-    return {"key": 42}
+from heattree_py._widget import _to_newick, heat_tree
 
 
-@pytest.fixture(scope="module")
-def expensive_resource():
-    """A resource created once per test module."""
-    resource = create_expensive_resource()
-    yield resource
-    resource.cleanup()
+SIMPLE_NEWICK = "(A:0.1,B:0.2,(C:0.3,D:0.4):0.5);"
+
+
+class TestToNewick:
+    """Tests for the _to_newick helper."""
+
+    def test_newick_string(self):
+        """A plain Newick string is returned as-is."""
+        assert _to_newick(SIMPLE_NEWICK) == SIMPLE_NEWICK
+
+    def test_file_path(self, tmp_path):
+        """A file path to a Newick file is read correctly."""
+        f = tmp_path / "tree.nwk"
+        f.write_text(SIMPLE_NEWICK)
+        assert _to_newick(str(f)) == SIMPLE_NEWICK
+
+
+class TestHeatTree:
+    """Integration tests for the public heat_tree function."""
+
+    def test_simple_tree(self):
+        """A Newick string produces a widget with an iframe."""
+        html = heat_tree(SIMPLE_NEWICK).to_html()
+        assert "<iframe" in html
+
+    def test_with_metadata(self):
+        """Metadata and aesthetics are embedded in the widget."""
+        meta = pd.DataFrame({
+            "node_id": ["A", "B", "C", "D"],
+            "group": ["x", "x", "y", "y"],
+        })
+        html = heat_tree(
+            SIMPLE_NEWICK,
+            metadata=meta,
+            aesthetics={"tipLabelColor": "group"},
+        ).to_html()
+        assert "tipLabelColor" in html
 ```
 
 ### Running Tests
@@ -249,15 +228,15 @@ Ruff automatically sorts and formats imports:
 
 ```python
 # Standard library
-import os
+import json
 from pathlib import Path
 
 # Third-party
-import requests
+import pandas as pd
 
 # First-party (this package)
-from heattree_py import utils
-from heattree_py.core import add
+from heattree_py import heat_tree
+from heattree_py._widget import _to_newick
 ```
 
 ### Docstrings
