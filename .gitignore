@@ -50,6 +50,10 @@ venv.bak/
 
 # Documentation build output
 /site
+docs/_site/
+docs/reference/
+!docs/reference/.gitkeep
+!docs/reference/index.qmd
 
 # Hatch
 .hatch/
@@ -63,3 +67,5 @@ Desktop.ini
 # Local development
 *.local
 local/
+
+.ipynb_checkpoints

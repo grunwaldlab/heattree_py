@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "heattree_py"
+  description: "Interactive phylogenetic tree visualization for Jupyter notebooks"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - getting-started.qmd
+      - examples.qmd
+      - href: reference/index.qmd
+        text: API Reference
+    right:
+      - icon: github
+        href: https://github.com/grunwaldlab/heattree_py
+  sidebar:
+    - title: Getting Started
+      contents:
+        - getting-started.qmd
+    - title: Examples
+      contents:
+        - examples.qmd
+    - title: API Reference
+      contents:
+        - section: Core Functions
+          contents:
+            - reference/heat_tree.qmd
+            - reference/example_data.qmd
+            - reference/HeatTreeWidget.qmd
+
+# quartodoc configuration for API reference
+quartodoc:
+  style: pkgdown
+  dir: reference
+  package: heattree_py
+  title: API Reference
+  sidebar: reference/_sidebar.yml
+  parser: google
+  sections:
+    - title: Core Functions
+      desc: Main visualization functions
+      contents:
+        - heat_tree
+        - example_data
+        - HeatTreeWidget
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap

@@ -1,0 +1,57 @@
+---
+title: "Examples"
+---
+
+This page showcases real-world examples using published phylogenetic datasets.
+
+## Weisberg et al. 2020
+
+Phylogenetic trees of *Agrobacterium* isolates from a study on virulence plasmid conservation and transmission:
+
+> Alexandra J. Weisberg et al., Unexpected conservation and global transmission
+> of agrobacterial virulence plasmids. Science 368, eaba5256 (2020).
+
+The widget below contains both the MLSA (multilocus sequence analysis) tree and
+the time-calibrated BEAST tree. Use the "Select tree" dropdown in the toolbar's
+"Data" tab to switch between them.
+
+```{python}
+from heattree_py import heat_tree, example_data
+
+heat_tree(
+    tree=[
+        example_data("weisberg_2020_mlsa"),
+        example_data("weisberg_2020_beast")
+    ],
+    metadata=[
+        example_data("weisberg_2020_metadata"),
+        example_data("weisberg_2020_metadata")
+    ],
+    aesthetics=[
+        {"tipLabelText": "strain", "tipLabelColor": "host_type"},
+        {"tipLabelText": "strain", "tipLabelColor": "year_isolated"}
+    ],
+    tree_names=["MLSA", "BEAST"],
+    layout="circular"
+)
+```
+
+## Bansal et al. 2021
+
+Phylogenetic tree from a comparative genomics study of *Xylella*:
+
+> Bansal, K., Kumar, S., Kaur, A., Singh, A., & Patil, P. B. (2021). Deep
+> phylo-taxono genomics reveals Xylella as a variant lineage of plant associated
+> Xanthomonas and supports their taxonomic reunification along with
+> Stenotrophomonas and Pseudoxanthomonas. Genomics, 113(6), 3989-4003.
+
+```{python}
+heat_tree(
+    example_data("bansal_2021_tree"),
+    metadata=example_data("bansal_2021_metadata"),
+    aesthetics={
+        "tipLabelText": "Strain",
+        "tipLabelColor": "Lifestyle"
+    }
+)
+```

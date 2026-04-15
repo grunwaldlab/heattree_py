@@ -1,0 +1,23 @@
+/* Custom styles for heattree_py documentation */
+
+/* Hero section styling */
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+/* Make the API reference index look nice */
+.quarto-listing .listing-title {
+  font-weight: 600;
+}
+
+/* Improve code block appearance */
+pre.sourceCode {
+  border-radius: 4px;
+}
+
+/* Add some spacing to callouts */
+.callout {
+  margin: 1.5rem 0;
+}

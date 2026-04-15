@@ -10,7 +10,9 @@ whether JS is bundled per-widget or loaded from CDN.
 
 import json
 import re
+import tempfile
 import uuid
+import webbrowser
 from pathlib import Path
 
 import pandas as pd
@@ -333,7 +335,7 @@ def _build_html_standalone_embedded(trees_data, options, widget_id, height):
     }}
 
     try {{
-        HeatTree.heatTree("#{widget_id}", {trees_json}, {options_json});
+        window.HeatTree.heatTree("#{widget_id}", {trees_json}, {options_json});
     }} catch (e) {{
         container.innerHTML = "<div style=\\\"padding: 20px; color: red;\\\">" +
             "Error rendering tree: " + e.message + "</div>";
@@ -356,7 +358,7 @@ def _build_html_standalone_cdn(trees_data, options, widget_id, height):
 
     function render() {{
         try {{
-            HeatTree.heatTree("#{widget_id}", {trees_json}, {options_json});
+            window.HeatTree.heatTree("#{widget_id}", {trees_json}, {options_json});
         }} catch (e) {{
             container.innerHTML = "<div style=\\\"padding: 20px; color: red;\\\">" +
                 "Error rendering tree: " + e.message + "</div>";
@@ -381,6 +383,92 @@ def _build_html_standalone_cdn(trees_data, options, widget_id, height):
 </script>"""
 
 
+def _build_full_page_html(widget_html, embed):
+    """Build a full-page HTML document that fills the entire viewport.
+
+    Args:
+        widget_html: The widget HTML fragment (div + script).
+        embed: Whether JS is embedded (True) or CDN (False).
+
+    Returns:
+        Complete HTML document as a string.
+    """
+    if embed:
+        js_code = _get_embedded_js()
+        js_block = f"""<script type="text/javascript">
+(function() {{
+    if (typeof window.HeatTree === 'undefined') {{
+        try {{
+            {js_code}
+            if (typeof HeatTree !== 'undefined') {{
+                window.HeatTree = HeatTree;
+            }}
+        }} catch (e) {{
+            console.error('heattree_py: Error loading JS:', e);
+        }}
+    }}
+}})();
+</script>"""
+    else:
+        js_block = f"""<script type="text/javascript">
+(function() {{
+    if (typeof window.HeatTree === 'undefined') {{
+        var script = document.createElement("script");
+        script.src = "{CDN_URL}";
+        script.onerror = function() {{
+            console.error("heattree_py: Failed to load heat-tree widget from CDN.");
+        }};
+        document.head.appendChild(script);
+    }}
+}})();
+</script>"""
+
+    return f"""<!DOCTYPE html>
+<html style="margin: 0; padding: 0; width: 100%; height: 100%;">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heat Tree</title>
+<style>
+html, body {{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}}
+#heat-tree-container {{
+    width: 100%;
+    height: 100%;
+}}
+</style>
+{js_block}
+</head>
+<body>
+<div id="heat-tree-container">
+{widget_html}
+</div>
+</body>
+</html>"""
+
+
+def _open_browser(file_path):
+    """Open a file in the default web browser.
+
+    Args:
+        file_path: Path to the HTML file.
+
+    Returns:
+        True if browser was opened, False otherwise.
+    """
+    url = f"file://{file_path.absolute()}"
+    try:
+        webbrowser.open(url, new=2)  # new=2 opens in a new tab
+        return True
+    except Exception:
+        return False
+
+
 # ---------------------------------------------------------------------------
 # Display object
 # ---------------------------------------------------------------------------
@@ -395,12 +483,14 @@ class HeatTreeWidget:
     Attributes:
         _embed: Whether the widget was created with embed=True.
         _env: The detected environment ("jupyter", "ipython", or "plain").
+        _temp_path: Path to the temporary file if show() was called.
     """
 
     def __init__(self, html, embed, env):
         self._html = html
         self._embed = embed
         self._env = env
+        self._temp_path = None
 
     def _repr_html_(self):
         """Return the HTML representation for Jupyter rendering."""
@@ -438,6 +528,35 @@ h1 {{
 </html>"""
         Path(path).write_text(html, encoding="utf-8")
 
+    def show(self):
+        """Open the widget in a web browser.
+
+        Saves the widget to a temporary HTML file and opens it in the
+        default web browser. The file path is printed to stdout.
+
+        Returns:
+            pathlib.Path: Path to the saved temporary HTML file.
+        """
+        full_html = _build_full_page_html(self._html, self._embed)
+
+        # Create a temp file that persists after close
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            suffix=".html",
+            prefix="heat_tree_",
+            delete=False,
+            encoding="utf-8",
+        ) as f:
+            f.write(full_html)
+            self._temp_path = Path(f.name)
+
+        print(f"Heat Tree saved to: {self._temp_path}")
+
+        if not _open_browser(self._temp_path):
+            print("Note: Could not open browser automatically.")
+
+        return self._temp_path
+
 
 # ---------------------------------------------------------------------------
 # Public API
@@ -449,7 +568,9 @@ def heat_tree(
     metadata=None,
     aesthetics=None,
     *,
+    tree_names=None,
     embed=True,
+    open_browser=True,
     width="100%",
     height="500px",
     **options,
@@ -463,10 +584,38 @@ def heat_tree(
 
     In non-Jupyter environments (plain Python, IPython terminal), the
     ``embed`` parameter controls whether the JS is bundled with each
-    widget (for offline use) or loaded from CDN.
+    widget (for offline use) or loaded from CDN. When ``open_browser``
+    is True (the default), the visualization is saved to a temporary
+    HTML file and opened in the default web browser.
+
+    Args:
+        tree: Tree input (Newick string, file path, ete3 TreeNode,
+            dendropy Tree, Biopython Phylo tree, or scikit-bio TreeNode).
+        metadata: Optional metadata as pandas DataFrame, file path, or
+            TSV/CSV string.
+        aesthetics: Optional dictionary mapping visual properties to
+            metadata columns.
+        tree_names: Optional list of names for each tree. Must be the same
+            length as the number of trees. If not provided, trees are named
+            "tree 1", "tree 2", etc.
+        embed: If True (default), bundle the JavaScript library with the
+            widget. If False, load from CDN. Ignored in Jupyter.
+        open_browser: If True (default) and not in Jupyter, save the
+            widget to a temporary HTML file and open in the default
+            browser. Has no effect in Jupyter environments.
+        width: CSS width for the widget container. Default is "100%".
+        height: CSS height for the widget container. Default is "500px".
+        **options: Additional options passed to the JavaScript widget.
+
+    Returns:
+        HeatTreeWidget: The widget object.
     """
     if not isinstance(embed, bool):
         raise TypeError("embed must be a boolean")
+    if not isinstance(open_browser, bool):
+        raise TypeError("open_browser must be a boolean")
+    if tree_names is not None and not isinstance(tree_names, (list, tuple)):
+        raise TypeError("tree_names must be a list or tuple")
 
     # Detect environment
     env = _detect_jupyter()
@@ -476,15 +625,28 @@ def heat_tree(
     metadata_list = _normalise_to_list(metadata)
     aesthetics_list = _normalise_to_list(aesthetics, allow_dict=True)
 
+    # Validate tree_names length if provided
+    if (
+        tree_names is not None
+        and tree_list is not None
+        and len(tree_names) != len(tree_list)
+    ):
+        raise ValueError(
+            f"tree_names length ({len(tree_names)}) must match "
+            f"number of trees ({len(tree_list)})"
+        )
+
     # -- Build per-tree data structures ------------------------------------
     trees_data = []
 
     if tree_list is not None:
         for i, t in enumerate(tree_list):
             newick = _to_newick(t)
+            # Use provided name or default
+            name = tree_names[i] if tree_names is not None else f"tree {i + 1}"
             tree_obj = {
-                "name": f"tree {i + 1}",
-                "newick": newick,
+                "name": name,
+                "tree": newick,
             }
 
             # Metadata
@@ -548,8 +710,16 @@ def heat_tree(
             html = _build_html_jupyter_cdn(trees_data, options, widget_id, height)
     else:
         if embed:
-            html = _build_html_standalone_embedded(trees_data, options, widget_id, height)
+            html = _build_html_standalone_embedded(
+                trees_data, options, widget_id, height
+            )
         else:
             html = _build_html_standalone_cdn(trees_data, options, widget_id, height)
 
-    return HeatTreeWidget(html, embed, env)
+    widget = HeatTreeWidget(html, embed, env)
+
+    # -- CLI mode: save and open browser ------------------------------------
+    if env != "jupyter" and open_browser:
+        widget.show()
+
+    return widget

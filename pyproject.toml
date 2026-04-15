@@ -10,7 +10,7 @@ readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
 authors = [
-    { name = "Zachary Foster", email = "zacharyfoster1989@gmail.com" },
+    { name = "Zachary Stephen Longiaru Foster", email = "zacharyfoster1989@gmail.com" },
 ]
 keywords = [
     "phylogenetics",
@@ -50,12 +50,10 @@ docs = [
 
 [project.urls]
 Homepage = "https://github.com/grunwaldlab/heattree_py"
-Documentation = "https://heattree_py.readthedocs.io"
+Documentation = "https://grunwaldlab.github.io/heattree_py/"
 Repository = "https://github.com/grunwaldlab/heattree_py"
 Issues = "https://github.com/grunwaldlab/heattree_py/issues"
 Changelog = "https://github.com/grunwaldlab/heattree_py/blob/main/CHANGELOG.md"
-
-
 
 [tool.hatch.version]
 path = "src/heattree_py/__init__.py"
@@ -64,6 +62,7 @@ path = "src/heattree_py/__init__.py"
 dependencies = [
     "pytest>=8.0",
     "pytest-xdist>=3.5",
+    "pytest-playwright>=0.4.0",
     "ruff>=0.3.0",
     "ipython>=7.0",
 ]
@@ -100,15 +99,25 @@ include = [
 
 [tool.hatch.envs.docs]
 dependencies = [
-    "mkdocs>=1.5",
-    "mkdocs-material>=9.0",
-    "mkdocstrings[python]>=0.24",
+    "quartodoc>=0.7.0",
+    "jupyter",
+    "dendropy",
+    "ete3"
 ]
 
 [tool.hatch.envs.docs.scripts]
-build = "mkdocs build {args}"
-serve = "mkdocs serve {args}"
-deploy = "mkdocs gh-deploy {args}"
+build = [
+    "cd docs && quartodoc build",
+    "cd docs && quarto render",
+]
+serve = [
+    "cd docs && quartodoc build",
+    "cd docs && quarto preview",
+]
+deploy = [
+    "cd docs && quartodoc build && quarto render",
+    "cd docs && quarto publish gh-pages",
+]
 
 [tool.ruff]
 target-version = "py310"
@@ -162,4 +171,5 @@ addopts = [
 markers = [
     "slow: marks tests as slow (deselect with '')",
     "integration: marks tests as integration tests",
+    "browser: marks tests that require a browser (via playwright)",
 ]

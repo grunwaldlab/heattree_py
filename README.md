@@ -16,6 +16,11 @@ package.
 pip install heattree_py
 ```
 
+## Documentation
+
+Full documentation with interactive examples is available at:
+**https://grunwaldlab.github.io/heattree_py/**
+
 ## Quick start
 
 ```python

@@ -1,0 +1,223 @@
+---
+title: "Getting Started"
+---
+
+This guide will walk you through the basics of using `heattree_py` to create
+interactive phylogenetic tree visualizations in Python.
+
+## Installation
+
+```bash
+pip install heattree_py
+```
+
+## Basic Usage
+
+This package is designed to be as simple to use as possible while also allowing
+for advanced customization. In fact, since you can upload tree and metadata
+interactively, it is entirely valid to create a widget with no input:
+
+```{python}
+from heattree_py import heat_tree
+
+heat_tree()
+```
+
+
+## Loading Tree Data
+
+However, typically you would define a tree to be plot when the widget is initialized.
+The following types of tree data are currently supported:
+
+- Newick/Nexus formatted strings
+- File paths to Newick/Nexus files
+- `ete3.TreeNode` objects
+- `dendropy.Tree` objects
+- `Bio.Phylo` objects
+- `skbio.TreeNode` objects
+
+The `heattree_py` package includes example data sets that can be accessed with
+`example_data()`.
+You can see available example files by running `example_data()` without parameters and get
+the path to a specific file by passing its ID as a parameter.
+Below, we use one such file to plot a tree from a study of agrobacterial plasmid
+diversity:
+
+```{python}
+from heattree_py import heat_tree, example_data
+from pathlib import Path
+
+# Using example data path
+tree_path = example_data("weisberg_2020_mlsa")
+heat_tree(tree_path, manualZoomAndPanEnabled = False)
+```
+
+You can also pass tree data directly as a string:
+
+```{python}
+newick_string = "(A:0.1,B:0.2,(C:0.3,D:0.4):0.5);"
+heat_tree(newick_string, manualZoomAndPanEnabled = False)
+```
+
+Or use objects from popular phylogenetic libraries:
+
+```{python}
+# Using ete3
+from ete3 import Tree
+tree = Tree("(A:0.1,B:0.2,(C:0.3,D:0.4):0.5);")
+heat_tree(tree)
+
+# Using dendropy (if installed)
+import dendropy
+tree = dendropy.Tree.get(data="(A:0.1,B:0.2,(C:0.3,D:0.4):0.5);", schema="newick")
+heat_tree(tree)
+```
+
+## Adding Metadata
+
+Metadata associated with tree nodes can be plotted using the size or color of
+tree components such as tip labels. Metadata tables should be a pandas DataFrame
+or a path to a TSV/CSV file with a column that corresponds to node IDs in the
+tree input.
+
+```{python}
+from heattree_py import heat_tree, example_data
+
+# Load example data
+tree_path = example_data("weisberg_2020_mlsa")
+meta_path = example_data("weisberg_2020_metadata")
+
+# Create visualization with metadata
+heat_tree(
+    tree_path,
+    metadata=meta_path,
+    aesthetics={"tipLabelText": "strain", "tipLabelColor": "host_type"}
+)
+```
+
+### Available Aesthetics
+
+The `aesthetics` parameter maps visual properties to metadata columns:
+
+| Aesthetic | Description | Data Type |
+|-----------|-------------|-----------|
+| `tipLabelText` | Text content for tip labels | any |
+| `tipLabelColor` | Color of tip labels | categorical/continuous |
+| `tipLabelSize` | Size of tip labels | continuous |
+| `tipLabelFont` | Font family for tip labels | categorical |
+| `tipLabelStyle` | Font style (normal, bold, italic) | categorical |
+
+```{python}
+heat_tree(
+    tree_path,
+    metadata=meta_path,
+    aesthetics={
+        "tipLabelText": "strain",
+        "tipLabelColor": "host_type",
+        "tipLabelSize": "year_isolated"
+    }
+)
+```
+
+### Using DataFrame Index
+
+If the DataFrame index contains node IDs (rather than a column), it is
+automatically included as a column and used for matching:
+
+```{python}
+import pandas as pd
+from heattree_py import heat_tree
+
+tree = "(A:0.1,B:0.2,(C:0.3,D:0.4):0.5);"
+
+metadata = pd.DataFrame(
+    {"group": ["x", "x", "y", "y"], "size": [10, 20, 30, 40]},
+    index=["A", "B", "C", "D"]
+)
+
+heat_tree(tree, metadata=metadata, aesthetics={"tipLabelColor": "group"})
+```
+
+## Initial Settings
+
+Although the widget is primarily designed for interactive use, the initial
+settings can be set programmatically. All of the options described in the
+[heat-tree JavaScript documentation](https://grunwaldlab.github.io/heat-tree/)
+can be used as optional parameters.
+
+```{python}
+heat_tree(
+    tree_path,
+    metadata=meta_path,
+    aesthetics={"tipLabelColor": "host_type"},
+    layout="circular",          # "rectangular" (default) or "circular"
+    branchLengthScale=1.5,      # scale factor for branch lengths
+    treeHeightScale=2.0,        # scale factor for spacing between tips
+    transitionDuration=750,     # animation duration in ms
+)
+```
+
+## Multiple Trees
+
+The widget is capable of managing multiple trees at once. To initialize a widget
+with multiple trees, supply lists of tree and metadata inputs:
+
+```{python}
+heat_tree(
+    tree=[
+        example_data("weisberg_2020_mlsa"),
+        example_data("weisberg_2020_beast"),
+        example_data("bansal_2021_tree")
+    ],
+    metadata=[
+        example_data("weisberg_2020_metadata"),
+        example_data("weisberg_2020_metadata"),
+        example_data("bansal_2021_metadata")
+    ],
+    aesthetics=[
+        {"tipLabelText": "strain", "tipLabelColor": "host_type"},
+        {"tipLabelText": "strain", "tipLabelColor": "year_isolated"},
+        {"tipLabelColor": "Lifestyle"}
+    ]
+)
+```
+
+Use the "Select tree" dropdown in the toolbar's "Data" tab to switch between
+loaded trees.
+
+## Widget Sizing
+
+You can control the size of the widget using the `width` and `height` parameters:
+
+```{python}
+heat_tree(tree_path, width="80%", height="600px")
+```
+
+## Example Data
+
+The package includes example datasets that are automatically available:
+
+```{python}
+from heattree_py import example_data
+
+# List available datasets
+example_data()
+
+# Get path to a specific dataset
+tree_path = example_data("weisberg_2020_mlsa")
+```
+
+Available datasets:
+
+- `weisberg_2020_mlsa` - MLSA phylogeny of agrobacterial strains
+- `weisberg_2020_beast` - BEAST time-calibrated phylogeny
+- `weisberg_2020_metadata` - Metadata for Weisberg trees
+- `bansal_2021_tree` - Core gene phylogeny of Xylella
+- `bansal_2021_metadata` - Metadata for Bansal tree
+
+## Widget Controls
+
+For information on the interactive controls embedded in the widget
+(zoom, pan, collapse, export, etc.), refer to the documentation of the
+[heat-tree JavaScript package](https://grunwaldlab.github.io/heat-tree/)
+that implements them.

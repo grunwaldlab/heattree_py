@@ -1,0 +1,61 @@
+---
+title: "heattree_py"
+subtitle: "Interactive Phylogenetic Tree Visualization for Jupyter"
+---
+
+::: {.hero}
+
+A Python package for interactive phylogenetic and taxonomic tree visualization 
+in Jupyter notebooks using the [heat-tree](https://grunwaldlab.github.io/heat-tree/) 
+JavaScript library.
+
+:::
+
+## Installation
+
+```bash
+pip install heattree_py
+```
+
+## Quick Start
+
+```{python}
+from heattree_py import heat_tree
+
+# Minimal example with a Newick string
+heat_tree("(A:0.1,B:0.2,(C:0.3,D:0.4):0.5);")
+```
+
+## Features
+
+- **Interactive Visualization** - Interactive phylogenetic tree visualization with rectangular and circular layouts
+- **Metadata Support** - Visualize categorical and continuous variables through color and size
+- **Tree Manipulation** - Collapse, expand, hide, and reveal subtrees interactively
+- **Export Options** - Export visualizations to SVG and PNG formats
+- **Multiple Tree Formats** - Support for Newick, Nexus, and Python tree objects (ete3, dendropy, Biopython, scikit-bio)
+- **Self-Contained** - Works in static HTML exports (no running kernel required)
+
+::: {.callout-note}
+## Related Packages
+
+- **[heattree (R)](https://grunwaldlab.github.io/heattree/)** - The R package for R Markdown and Quarto documents
+- **[heat-tree (JavaScript)](https://grunwaldlab.github.io/heat-tree/)** - The underlying JavaScript library for web development
+:::
+
+## Citation
+
+If you use this package in your research, please cite:
+
+> Foster, Z., & Grunwald, N. (2024). heattree_py: Interactive phylogenetic tree 
+> visualization for Jupyter notebooks. 
+> https://github.com/grunwaldlab/heattree_py
+
+## License
+
+MIT License. See the [GitHub repository](https://github.com/grunwaldlab/heattree_py) for details.
+
+## Contributing
+
+Contributions and feedback are welcome! Please visit the 
+[GitHub repository](https://github.com/grunwaldlab/heattree_py) to report issues 
+or submit pull requests.
