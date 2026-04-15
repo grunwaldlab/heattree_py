@@ -101,10 +101,12 @@ if _detect_jupyter() == "jupyter":
 
 
 from heattree_py._widget import HeatTreeWidget, heat_tree  # noqa: E402
+from heattree_py.data import example_data  # noqa: E402
 
 __all__ = [
     "HEAT_TREE_JS_VERSION",
     "HeatTreeWidget",
     "__version__",
+    "example_data",
     "heat_tree",
 ]

@@ -81,11 +81,13 @@ fix = [
     "ruff format src tests",
 ]
 update-js = "python scripts/download_js.py"
+install = "python3 -m pip install -e ."
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/heattree_py"]
 include = [
     "src/heattree_py/_static/*.js",
+    "src/heattree_py/data",
 ]
 
 [tool.hatch.build.targets.wheel.hooks.custom]

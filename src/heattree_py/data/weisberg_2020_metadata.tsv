@@ -1,0 +1,149 @@
+strain	species	genus	genomospecies	host	host_type	opine_type	year_isolated	plasmid_class	plasmid_type	ncbi_accession	mlsa_node_id	beast_node_id
+Rhizobium rhizogenes H16/79	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rose	Woody	Agrocinopine/Other	1979	Ti	Type Ib	SAMN14165424	H16_79__BV2	H16_79
+Rhizobium rhizogenes CG101/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Grape	Grape (Woody)	NA	1995	NA	None	SAMN14165425	CG101_95__BV2	CG101_95
+Agrobacterium rubi W2/73	Agrobacterium rubi	Agrobacterium	Agrobacterium rubi	Euonymus	Woody	Agrocinopine/Other	1973	Ti	Type Ib	SAMN14165629	W2_73__Aru	W2_73
+Rhizobium rhizogenes Di1462	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rose	Woody	Nopaline	NA	Ti	Type Ia	SAMN14165426	Di1462__BV2	Di1462
+Rhizobium rhizogenes A 6.4	Rhizobium rhizogenes	Rhizobium	Biovar 2	Cherry	Woody	Nopaline	2008	Ti	Type Ia	SAMN14165427	A_6.4__BV2	A_6.4
+Agrobacterium tumefaciens LMG 305	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Stonecrop (Sedum)	Herbaceous	Nopaline	1958	Ti	Type Ib	SAMN14165428	LMG_305__BV1	LMG_305
+Rhizobium rhizogenes CM79/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Grape	Grape (Woody)	Nopaline	1995	Ti	Type Ia	SAMN14165429	CM79_95__BV2	CM79_95
+Allorhizobium vitis BM37/95	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Vitopine/Nopaline	1995	Ti	Type V	SAMN14165430	BM37_95__BV3	BM37_95
+Rhizobium rhizogenes J10B/93	Rhizobium rhizogenes	Rhizobium	Biovar 2	Olallieberry	Woody	Nopaline	1993	Ti	Type Ib	SAMN14165431	J10B_93__BV2	J10B_93
+Rhizobium rhizogenes R 10.1	Rhizobium rhizogenes	Rhizobium	Biovar 2	Peach	Woody	Nopaline	2009	Ti	Type Ia	SAMN14165432	R_10.1__BV2	R_10.1
+Rhizobium rhizogenes N64/94	Rhizobium rhizogenes	Rhizobium	Biovar 2	Raspberry	Woody	Nopaline	1994	Ti	Type Ia	SAMN14165433	N64_94__BV2	N64_94
+Rhizobium rhizogenes A 13.1	Rhizobium rhizogenes	Rhizobium	Biovar 2	Cherry	Woody	Nopaline	2009	Ti	Type Ia	SAMN14165434	A_13.1__BV2	A_13.1
+Allorhizobium vitis P86/93	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Nopaline	1993	Ti	Type IVa	SAMN14165436	P86_93__BV3	P86_93
+Allorhizobium vitis T268/95	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Vitopine/Nopaline	1995	Ti	Type V	SAMN14165437	T268_95__BV3	T268_95
+Rhizobium rhizogenes B131/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Peach/Almond Rootstock	Woody	Nopaline	1995	Ti	Type Ia	SAMN04901296	B131_95__BV2	B131_95
+Rhizobium rhizogenes D108/85	Rhizobium rhizogenes	Rhizobium	Biovar 2	Blueberry	Woody	NA	1985	NA	None	SAMN14165438	D108_85__BV2	D108_85
+Rhizobium rhizogenes D1/76	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rose	Woody	Nopaline	1976	Ti	Type Ia	SAMN14165439	D1_76__BV2	D1_76
+Neorhizobium sp. AL 9.2.2	Neorhizobium sp.	Neorhizobium	Neorhizobium sp.	Plum	Woody	NA	2008	NA	None	SAMN14165440	AL_9.2.2__	AL_9.2.2
+Rhizobium rhizogenes PVM 10.5	Rhizobium rhizogenes	Rhizobium	Biovar 2	Peach	Woody	Nopaline	2009	Ti	Type Ia	SAMN14165441	PVM_10.5__BV2	PVM_10.5
+Allorhizobium vitis T60/94	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Nopaline	1994	Ti	Type IVa	SAMN14165442	T60_94__BV3	T60_94
+Rhizobium rhizogenes U167/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Grape	Grape (Woody)	NA	1995	NA	None	SAMN14165443	U167_95__BV2	U167_95
+Agrobacterium tumefaciens 13-2099-1-2	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Aspen	Woody	Nopaline	2013	Ti	Type Ib	SAMN04901292	13-2099-1-2__BV1	13-2099-1-2
+Rhizobium rhizogenes L29/94	Rhizobium rhizogenes	Rhizobium	Biovar 2	Blueberry	Woody	Nopaline	1994	Ti	Type Ia	SAMN14165444	L29_94__BV2	L29_94
+Agrobacterium tumefaciens AF82/95	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Lilac	Woody	Octopine/Agropine	1995	Ti	Type II	SAMN14165445	AF82_95__BV1	AF82_95
+Rhizobium rhizogenes RO 10.5	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rose	Woody	Nopaline	2009	Ti	Type Ia	SAMN14165446	RO_10.5__BV2	RO_10.5
+Rhizobium rhizogenes D2/76	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rose	Woody	Nopaline	1976	Ti	Type Ia	SAMN14165447	D2_76__BV2	D2_76
+Rhizobium rhizogenes AL. 21.2	Rhizobium rhizogenes	Rhizobium	Biovar 2	Plum	Woody	Nopaline	2009	Ti	Type Ia	SAMN14165448	AL._21.2__BV2	AL._21.2
+Rhizobium rhizogenes R 1.1	Rhizobium rhizogenes	Rhizobium	Biovar 2	Peach	Woody	Nopaline	2008	Ti	Type Ia	SAMN14165449	R_1.1__BV2	R_1.1
+Rhizobium rhizogenes D1/94	Rhizobium rhizogenes	Rhizobium	Biovar 2	Grape	Grape (Woody)	Nopaline	1994	Ti	Type Ia	SAMN14165450	D1_94__BV2	D1_94
+Agrobacterium tumefaciens 15-1187-1-2a	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Yarrow	Herbaceous	Nopaline/Chrysopine	2015	Ti	Type III	SAMN04901301	15-1187-1-2a__BV1	15-1187-1-2a
+Rhizobium rhizogenes B133/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Peach/Almond Rootstock	Woody	Nopaline	1995	Ti	Type Ia	SAMN04901297	B133_95__BV2	B133_95
+Rhizobium rhizogenes D100/85	Rhizobium rhizogenes	Rhizobium	Biovar 2	Blueberry	Woody	NA	1985	NA	None	SAMN14165451	D100_85__BV2	D100_85
+Agrobacterium tumefaciens AF52/95	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Lilac	Woody	Octopine/Agropine	1995	Ti	Type II	SAMN14165452	AF52_95__BV1	AF52_95
+Rhizobium rhizogenes W 1.1	Rhizobium rhizogenes	Rhizobium	Biovar 2	Plum	Woody	Nopaline	2008	Ti	Type Ia	SAMN14165453	W_1.1__BV2	W_1.1
+Agrobacterium tumefaciens G 8.3	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Cherry	Woody	Nopaline	2008	Ti	Type Ia	SAMN14165454	G_8.3__BV1	G_8.3
+Allorhizobium vitis T267/94	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Nopaline	1994	Ti	Type IVa	SAMN14165455	T267_94__BV3	T267_94
+Agrobacterium tumefaciens 15-1187-1-2b	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Yarrow	Herbaceous	Nopaline/Chrysopine	2015	Ti	Type III	SAMN04901302	15-1187-1-2b__BV1	15-1187-1-2b
+Agrobacterium tumefaciens N2/73	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Raspberry	Woody	Nopaline	1973	Ti	Type Ia	SAMN04901299	N2_73__BV1	N2_73
+Rhizobium rhizogenes L20/94	Rhizobium rhizogenes	Rhizobium	Biovar 2	Blueberry	Woody	NA	1994	NA	None	SAMN14165456	L20_94__BV2	L20_94
+Agrobacterium tumefaciens AF1/95	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Lilac	Woody	Octopine/Agropine	1995	Ti	Type II	SAMN14165457	AF1_95__BV1	AF1_95
+Rhizobium rhizogenes W 1.4	Rhizobium rhizogenes	Rhizobium	Biovar 2	Plum	Woody	Nopaline	2008	Ti	Type Ia	SAMN14165458	W_1.4__BV2	W_1.4
+Agrobacterium tumefaciens LMG 215	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Hop	Herbaceous	NA	1928	NA	None	SAMN06693640	LMG_215__BV1	LMG_215
+Allorhizobium vitis T393/94	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Nopaline	1994	Ti	Type IVa	SAMN14165459	T393_94__BV3	T393_94
+Agrobacterium tumefaciens B140/95	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Peach/Almond Rootstock	Woody	Octopine/Agropine	1995	Ti	Type II	SAMN04901298	B140_95__BV1	B140_95
+Agrobacterium tumefaciens IL30	Agrobacterium tumefaciens	Agrobacterium	Agrobacterium tumefaciens	Rose	Woody	Agrocinopine/Other	NA	Ti	Type Ib	SAMN14165460	IL30__	IL30
+Rhizobium rhizogenes G 10.5	Rhizobium rhizogenes	Rhizobium	Biovar 2	Cherry	Woody	Nopaline	2009	Ti	Type Ia	SAMN14165461	G_10.5__BV2	G_10.5
+Agrobacterium tumefaciens LMG 232	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Beet	Herbaceous	NA	1963	NA	None	SAMN14165462	LMG_232__BV1	LMG_232
+Allorhizobium vitis V80/94	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Vitopine/Nopaline	1994	Ti	Type V	SAMN14165463	V80_94__BV3	V80_94
+Agrobacterium tumefaciens 15-172	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Shasta Daisy	Herbaceous	Nopaline/Chrysopine	NA	Ti	Type III	SAMN04901304	15-172__BV1	15-172
+BV2-like sp. AC44/96	BV2-like sp.	BV2-like	Biovar 2 like	Japanese pieris	Woody	NA	1996	NA	None	SAMN04901295	AC44_96__BV2-like	AC44_96
+Agrobacterium tumefaciens FPH-AT4	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Blanket flower (Gaillardia)	Herbaceous	Nopaline/Mannopine	2014	Ti	Type III	SAMN14165464	FPH-AT4__BV1	FPH-AT4
+Agrobacterium tumefaciens W9/94	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Walnut	Woody	Nopaline	1994	Ti	Type Ia	SAMN14165465	W9_94__BV1	W9_94
+Rhizobium rhizogenes RO 2.2	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rose	Woody	Nopaline	2009	Ti	Type Ia	SAMN14165466	RO_2.2__BV2	RO_2.2
+Agrobacterium tumefaciens LMG 267	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Tomato	Herbaceous	Octopine/Agropine	1935	Ti	Type II	SAMN14165467	LMG_267__BV1	LMG_267
+Allorhizobium vitis AV25/95	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Vitopine/Nopaline	1995	Ti	Type V	SAMN14165468	AV25_95__BV3	AV25_95
+Agrobacterium tumefaciens 15-174	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Shasta Daisy	Herbaceous	Nopaline/Chrysopine	2015	Ti	Type III	SAMN04901305	15-174__BV1	15-174
+BV2-like sp. AC27/96	BV2-like sp.	BV2-like	Biovar 2 like	Japanese pieris	Woody	NA	NA	NA	None	SAMN04901294	AC27_96__BV2-like	AC27_96
+Agrobacterium larrymoorei FPH-AR2	Agrobacterium larrymoorei	Agrobacterium	Agrobacterium larrymoorei	Blanket flower (Gaillardia)	Herbaceous	Nopaline/Chrysopine	2014	Ti	Type III	SAMN14165469	FPH-AR2__Ala	FPH-AR2
+Rhizobium rhizogenes CM65/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Grape	Grape (Woody)	Agrocinopine/Other	1995	Ti	Type Ib	SAMN14165470	CM65_95__BV2	CM65_95
+Rhizobium rhizogenes RO 11.4	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rose	Woody	Nopaline	2010	Ti	Type Ia	SAMN14165471	RO_11.4__BV2	RO_11.4
+Agrobacterium tumefaciens LMG 292	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Lettuce	Herbaceous	NA	1974	NA	None	SAMN14165472	LMG_292__BV1	LMG_292
+Agrobacterium tumefaciens CG53/95	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Grape	Grape (Woody)	NA	1995	NA	None	SAMN14165473	CG53_95__BV1	CG53_95
+Rhizobium rhizogenes 13-626	Rhizobium rhizogenes	Rhizobium	Biovar 2	Pear	Woody	NA	2013	NA	None	SAMN04901293	13-626__BV2	13-626
+Rhizobium rhizogenes Di1411	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rose	Woody	Nopaline (Ti), Succinamopine (Ri)	NA	Ti, Ri	Type Ia, (Ri) Type II	SAMN14165474	Di1411__BV2	Di1411
+Agrobacterium tumefaciens IL15	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Rose	Woody	Agrocinopine/Other	NA	Ti	Type Ib	SAMN14165475	IL15__BV1	IL15
+Agrobacterium tumefaciens J3/75	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Apple	Woody	Nopaline	1975	Ti	Type Ia	SAMN14165476	J3_75__BV1	J3_75
+Agrobacterium tumefaciens Di1519	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Soil	NA	Octopine/Agropine	NA	Ti	Type II	SAMN14165477	Di1519__BV1	Di1519
+Agrobacterium rubi AS2A7	Agrobacterium rubi	Agrobacterium	Agrobacterium rubi	NA	NA	Agrocinopine/Other	NA	Ti	Type Ib	SAMN14165478	AS2A7__Aru	AS2A7
+Rhizobium rhizogenes CP182/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Wild Grape	Grape (Woody)	Nopaline	1995	Ti	Type Ia	SAMN14165479	CP182_95__BV2	CP182_95
+Agrobacterium tumefaciens 2788	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	NA	NA	Nopaline/Chrysopine	NA	Ti	Type III	SAMN14165480	2788__BV1	2788
+Rhizobium rhizogenes AF27/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Lilac	Woody	Octopine/Agropine	NA	Ti	Type II	SAMN14165481	AF27_95__BV2	AF27_95
+Agrobacterium tumefaciens K224	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Chrysanthemum	Herbaceous	Succinamopine/Chrysopine	NA	Ti	Type III	SAMN14165482	K224__BV1	K224
+Agrobacterium tumefaciens N40/94	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Raspberry	Woody	Agrocinopine/Other	1994	Ti	Type Ib	SAMN14165483	N40_94__BV1	N40_94
+Agrobacterium tumefaciens J2/75	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Apple	Woody	Nopaline	1975	Ti	Type Ia	SAMN14165484	J2_75__BV1	J2_75
+Agrobacterium rubi Eu3-2NK	Agrobacterium rubi	Agrobacterium	Agrobacterium rubi	Euonymous	Woody	Agrocinopine/Other	NA	Ti	Type Ib	SAMN14165485	Eu3-2NK__Aru	Eu3-2NK
+Rhizobium rhizogenes AF44/96	Rhizobium rhizogenes	Rhizobium	Biovar 2	Blackberry	Woody	Nopaline	1996	Ti	Type Ia	SAMN14165486	AF44_96__BV2	AF44_96
+Rhizobium rhizogenes T155/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Grape	Grape (Woody)	Cucumopine	NA	Ri	(Ri) Type III	SAMN14165487	T155_95__BV2	T155_95
+Agrobacterium rubi Eu2-1RS	Agrobacterium rubi	Agrobacterium	Agrobacterium rubi	Euonymous	Woody	Agrocinopine/Other	NA	Ti	Type Ib	SAMN14165488	Eu2-1RS__Aru	Eu2-1RS
+Agrobacterium rubi Eu2-1NK	Agrobacterium rubi	Agrobacterium	Agrobacterium rubi	Euonymous	Woody	Agrocinopine/Other	NA	Ti	Type Ib	SAMN14165489	Eu2-1NK__Aru	Eu2-1NK
+Rhizobium rhizogenes CM80/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Grape	Grape (Woody)	Nopaline	1995	Ti	Type Ia	SAMN14165490	CM80_95__BV2	CM80_95
+Agrobacterium rubi Eu3-2RS	Agrobacterium rubi	Agrobacterium	Agrobacterium rubi	Euonymous	Woody	Agrocinopine/Other	NA	Ti	Type Ib	SAMN14165491	Eu3-2RS__Aru	Eu3-2RS
+Rhizobium rhizogenes CA84/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Raspberry	Woody	Agrocinopine/Octopine-like/Nopaline	1995	Ti	Type IVc	SAMN14165492	CA84_95__BV2	CA84_95
+Rhizobium rhizogenes S32/96	Rhizobium rhizogenes	Rhizobium	Biovar 2	Almond	Woody	Nopaline	NA	Ti	Type Ia	SAMN14165493	S32_96__BV2	S32_96
+Agrobacterium tumefaciens 16-280-1a	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Lobelia	Herbaceous	Nopaline/Chrysopine	NA	Ti	Type III	SAMN14165494	16-280-1a__BV1	16-280-1a
+Rhizobium rhizogenes C16/80	Rhizobium rhizogenes	Rhizobium	Biovar 2	Apple	Woody	Succinamopine-like	1980	Ri	(Ri) Type II	SAMN14165495	C16_80__BV2	C16_80
+Agrobacterium tumefaciens 16-280-1b	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Lobelia	Herbaceous	Nopaline/Chrysopine	NA	Ti	Type III	SAMN14165496	16-280-1b__BV1	16-280-1b
+Rhizobium rhizogenes ATCC 15834	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rose	Woody	Succinamopine-like	NA	Ri	(Ri) Type III	SAMN14165497	ATCC_15834__BV2	ATCC_15834
+Agrobacterium tumefaciens B6806	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	NA	NA	Octopine/Agropine	NA	Ti	Type II	SAMN14165498	B6806__BV1	B6806
+Agrobacterium tumefaciens 1D1108	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Euonymus	Woody	Agrocinopine/Other	NA	Ti	Type Ib	SAMN14165499	1D1108__BV1	1D1108
+Agrobacterium tumefaciens 1D1460	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Raspberry	Woody	Nopaline	NA	Ti	Type Ia	SAMN14165500	1D1460__BV1	1D1460
+Agrobacterium tumefaciens 1D1609	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Alfalfa	Herbaceous	Octopine/Agropine	NA	Ti	Type II	SAMN14165501	1D1609__BV1	1D1609
+Agrobacterium tumefaciens 1D132	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Cherry	Woody	Agrocinopine/Other	NA	Ti	Type Ib	SAMN14165502	1D132__BV1	1D132
+Agrobacterium tumefaciens ATCC 15955	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Tomato	Herbaceous	Octopine/Agropine	NA	Ti	Type II	SAMN14165503	ATCC_15955__BV1	ATCC_15955
+Allorhizobium vitis CG412	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Octopine	NA	Ti	Type IVb	SAMN14165504	CG412__BV3	CG412
+Allorhizobium vitis CG678	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Vitopine/Nopaline	NA	Ti	Type V	SAMN14165505	CG678__BV3	CG678
+Allorhizobium vitis CG78	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Vitopine/Nopaline	NA	Ti	Type V	SAMN14165506	CG78__BV3	CG78
+Allorhizobium vitis F2/5	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	NA	NA	NA	None	SAMN14165507	F2_5__BV3	F2_5
+Agrobacterium tumefaciens 12D1	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	NA	NA	NA	NA	NA	None	SAMN14165508	12D1__BV1	12D1
+Agrobacterium tumefaciens 12D13	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	NA	NA	NA	NA	NA	None	SAMN14165509	12D13__BV1	12D13
+Agrobacterium tumefaciens A6	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Raspberry	Woody	Octopine/Agropine	NA	Ti	Type II	SAMN14165510	A6__BV1	A6
+Agrobacterium tumefaciens GC1A3	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Lobelia	Herbaceous	Nopaline/Chrysopine	NA	Ti	Type III	SAMN14165511	GC1A3__BV1	GC1A3
+Rhizobium rhizogenes K27	Rhizobium rhizogenes	Rhizobium	Biovar 2	Poplar	Woody	Nopaline	NA	Ti	Type Ia	SAMN14165512	K27__BV2	K27
+Agrobacterium rubi A19/93	Agrobacterium rubi	Agrobacterium	Agrobacterium rubi	Euonymus	Woody	Agrocinopine/Other	1993	Ti	Type Ib	SAMN14165513	A19_93__Aru	A19_93
+Rhizobium rhizogenes J5a/93	Rhizobium rhizogenes	Rhizobium	Biovar 2	Blackberry	Woody	Nopaline	1993	Ti	Type Ib	SAMN14165514	J5a_93__BV2	J5a_93
+Agrobacterium tumefaciens P22/94	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Aspen	Woody	Agrocinopine/Other	1994	Ti	Type Ib	SAMN14165515	P22_94__BV1	P22_94
+Agrobacterium tumefaciens W10/94	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Walnut	Woody	Agrocinopine/Other	1994	Ti	Type Ib	SAMN14165516	W10_94__BV1	W10_94
+Agrobacterium tumefaciens Q15/94	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Clematis	Herbaceous	Agrocinopine/Octopine-like/Nopaline	1994	Ti	Type VI	SAMN14165627	Q15_94__BV1	Q15_94
+Agrobacterium tumefaciens N33/94	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Raspberry	Woody	Agrocinopine/Other	1994	Ti	Type Ib	SAMN14165517	N33_94__BV1	N33_94
+Rhizobium rhizogenes Z4/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Apricot	Woody	Nopaline	1995	Ti	Type Ia	SAMN14165518	Z4_95__BV2	Z4_95
+Rhizobium rhizogenes AQ11/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Hawthorn	Woody	Nopaline	1995	Ti	Type Ia	SAMN14165519	AQ11_95__BV2	AQ11_95
+Rhizobium rhizogenes AP82/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Plum	Woody	Agrocinopine/Agropine	1995	Ti	Type Ib	SAMN14165520	AP82_95__BV2	AP82_95
+Rhizobium rhizogenes CA75/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Raspberry	Woody	Agrocinopine/Octopine-like/Nopaline	1995	Ti	Type IVc	SAMN14165628	CA75_95__BV2	CA75_95
+Rhizobium rhizogenes Y79/96	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rhododendron	Herbaceous	NA	1996	NA	None	SAMN14165521	Y79_96__BV2	Y79_96
+Rhizobium rhizogenes T5/73	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rose	Woody	Succinamopine-like	1973	Ri	(Ri) Type III	SAMN14165522	T5_73__BV2	T5_73
+Agrobacterium tumefaciens H25/79	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Rose	Woody	Agrocinopine/Other	1979	Ti	Type Ib	SAMN14165523	H25_79__BV1	H25_79
+Rhizobium rhizogenes P23/94	Rhizobium rhizogenes	Rhizobium	Biovar 2	Aspen	Woody	Agrocinopine/Other	1994	Ti	Type Ib	SAMN14165524	P23_94__BV2	P23_94
+Agrobacterium tumefaciens O16/94	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Blueberry	Woody	NA	1994	NA	None	SAMN14165525	O16_94__BV1	O16_94
+Rhizobium rhizogenes B147/94	Rhizobium rhizogenes	Rhizobium	Biovar 2	Walnut	Woody	Agrocinopine/Agropine	1994	Ti	Type Ib	SAMN14165526	B147_94__BV2	B147_94
+Agrobacterium tumefaciens T90/95	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Grape	Woody	NA	1995	NA	None	SAMN14165527	T90_95__BV1	T90_95
+Rhizobium rhizogenes AS10/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Grape	Woody	Nopaline	1995	Ti	Type Ia	SAMN14165528	AS10_95__BV2	AS10_95
+Rhizobium skierniewicense Di1472	Rhizobium skierniewicense	Rhizobium	Rhizobium skierniewicense	Shasta Daisy	Herbaceous	Succinamopine/Chrysopine	NA	Ti	Type III	SAMN14165529	Di1472__Ask	Di1472
+Agrobacterium tumefaciens Di1525a	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Peony	Herbaceous	Octopine/Agropine	NA	Ti	Type II	SAMN14165530	Di1525a__BV1	Di1525a
+Agrobacterium tumefaciens O54/95	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Cherry	Woody	Nopaline	1995	Ti	Type Ia	SAMN14165531	O54_95__BV1	O54_95
+Rhizobium rhizogenes X1/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Peach	Woody	Nopaline	1995	Ti	Type Ia	SAMN14165532	X1_95__BV2	X1_95
+Rhizobium rhizogenes K95/95	Rhizobium rhizogenes	Rhizobium	Biovar 2	Pear	Woody	Nopaline	1995	Ti	Type Ia	SAMN14165533	K95_95__BV2	K95_95
+Rhizobium rhizogenes A1/90	Rhizobium rhizogenes	Rhizobium	Biovar 2	Chestnut	Woody	Nopaline	1990	Ti	Type Ia	SAMN14165534	A1_90__BV2	A1_90
+Rhizobium rhizogenes B1/74	Rhizobium rhizogenes	Rhizobium	Biovar 2	Nanking Cherry	Woody	Nopaline	1974	Ti	Type Ia	SAMN14165535	B1_74__BV2	B1_74
+Rhizobium rhizogenes B4/73	Rhizobium rhizogenes	Rhizobium	Biovar 2	Maple	Woody	Nopaline	1973	Ti	Type Ia	SAMN14165536	B4_73__BV2	B4_73
+Agrobacterium tumefaciens CG920	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Clematis	Woody	Octopine/Agropine	NA	Ti	Type II	SAMN14165537	CG920__BV1	CG920
+Agrobacterium tumefaciens G3/79	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Willow	Woody	Agrocinopine/Agropine	1979	Ti	Type Ib	SAMN14165538	G3_79__BV1	G3_79
+Agrobacterium tumefaciens G9/79	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Poplar	Woody	Agrocinopine/Agropine	1979	Ti	Type Ib	SAMN14165539	G9_79__BV1	G9_79
+Rhizobium rhizogenes I2/75	Rhizobium rhizogenes	Rhizobium	Biovar 2	Rose	Woody	NA	1975	NA	None	SAMN14165540	I2_75__BV2	I2_75
+Rhizobium rhizogenes K6/73	Rhizobium rhizogenes	Rhizobium	Biovar 2	Willow	Woody	Nopaline	1973	Ti	Type Ia	SAMN14165541	K6_73__BV2	K6_73
+Agrobacterium tumefaciens K196/80	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Chrysanthemum	Herbaceous	Succinamopine/Chrysopine	1980	Ti	Type III	SAMN14165542	K196_80__BV1	K196_80
+Rhizobium rhizogenes M2/73	Rhizobium rhizogenes	Rhizobium	Biovar 2	Birch	Woody	Nopaline	1973	Ti	Type Ia	SAMN14165543	M2_73__BV2	M2_73
+Rhizobium rhizogenes P1/75	Rhizobium rhizogenes	Rhizobium	Biovar 2	Dahlia	Herbaceous	Octopine/Agropine	1975	Ti	Type II	SAMN14165545	P1_75__BV2	P1_75
+Agrobacterium tumefaciens Y2/73	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Dahlia	Herbaceous	Succinamopine/Agropine	1973	Ti	Type III	SAMN14165546	Y2_73__BV1	Y2_73
+Rhizobium rhizogenes B49C/83	Rhizobium rhizogenes	Rhizobium	Biovar 2	Apple	Woody	Agrocinopine/Agropine	1983	Ti	Type Ib	SAMN14165547	B49C_83__BV2	B49C_83
+Rhizobium rhizogenes D10b/87	Rhizobium rhizogenes	Rhizobium	Biovar 2	Apple	Woody	Nopaline	1987	Ti	Type Ia	SAMN14165548	D10b_87__BV2	D10b_87
+Rhizobium rhizogenes AR13K/71	Rhizobium rhizogenes	Rhizobium	Biovar 2	Crabapple	Woody	Succinamopine-like	1971	Ri	(Ri) Type II	SAMN14165549	AR13K_71__BV2	AR13K_71
+Agrobacterium tumefaciens 06-478 st	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Shasta Daisy	Herbaceous	Nopaline/Chrysopine	2006	Ti	Type III	SAMN14165551	06-478_st__BV1	06-478_st
+Agrobacterium tumefaciens YO0101	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Aster	Herbaceous	Octopine/Agropine	2002	Ti	Type II	SAMN14165552	YO0101__BV1	YO0101
+Agrobacterium tumefaciens 06-777-2L	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Marguerite Daisy	Herbaceous	NA	2006	NA	None	SAMN14165553	06-777-2L__BV1	06-777-2L
+Agrobacterium tumefaciens 06-617-1	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Marguerite Daisy	Herbaceous	Nopaline/Chrysopine	2006	Ti	Type III	SAMN14165554	06-617-1__BV1	06-617-1
+Agrobacterium tumefaciens A51	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Yarrow	Herbaceous	Nopaline/Chrysopine	2002	Ti	Type III	SAMN14165555	A51__BV1	A51
+Agrobacterium tumefaciens A74a	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Lavender	Herbaceous	NA	2003	NA	None	SAMN14165556	A74a__BV1	A74a
+Agrobacterium tumefaciens 14-818c	Agrobacterium tumefaciens	Agrobacterium	Biovar 1	Russian Sage	Herbaceous	Nopaline/Chrysopine	NA	Ti	Type III	SAMN14165557	14-818c__BV1	14-818c
+Allorhizobium vitis S4	Allorhizobium vitis	Allorhizobium	Biovar 3	Grape	Grape (Woody)	Vitopine/Nopaline	NA	NA	Type V	CP000637.1	S4__BV3	S4
