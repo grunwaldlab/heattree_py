@@ -62,6 +62,7 @@ heat_tree(newick_string, manualZoomAndPanEnabled = False)
 Or use objects from popular phylogenetic libraries:
 
 ```{python}
+#| eval: false
 # Using ete3
 from ete3 import Tree
 tree = Tree("(A:0.1,B:0.2,(C:0.3,D:0.4):0.5);")
@@ -91,9 +92,17 @@ meta_path = example_data("weisberg_2020_metadata")
 heat_tree(
     tree_path,
     metadata=meta_path,
-    aesthetics={"tipLabelText": "strain", "tipLabelColor": "host_type"}
+    aesthetics={"tipLabelText": "strain", "tipLabelColor": "host_type"},
+    manualZoomAndPanEnabled = False
 )
 ```
+
+:::{.callout-note}
+The column that contains node IDs is automatically selected based on its content, so it can have any name and be positioned anywhere in the table.
+If a `DataFrame` index contains node IDs, it is also automatically included as a column
+and used as the ID column.
+:::
+
 
 ### Available Aesthetics
 
@@ -107,55 +116,6 @@ The `aesthetics` parameter maps visual properties to metadata columns:
 | `tipLabelFont` | Font family for tip labels | categorical |
 | `tipLabelStyle` | Font style (normal, bold, italic) | categorical |
 
-```{python}
-heat_tree(
-    tree_path,
-    metadata=meta_path,
-    aesthetics={
-        "tipLabelText": "strain",
-        "tipLabelColor": "host_type",
-        "tipLabelSize": "year_isolated"
-    }
-)
-```
-
-### Using DataFrame Index
-
-If the DataFrame index contains node IDs (rather than a column), it is
-automatically included as a column and used for matching:
-
-```{python}
-import pandas as pd
-from heattree_py import heat_tree
-
-tree = "(A:0.1,B:0.2,(C:0.3,D:0.4):0.5);"
-
-metadata = pd.DataFrame(
-    {"group": ["x", "x", "y", "y"], "size": [10, 20, 30, 40]},
-    index=["A", "B", "C", "D"]
-)
-
-heat_tree(tree, metadata=metadata, aesthetics={"tipLabelColor": "group"})
-```
-
-## Initial Settings
-
-Although the widget is primarily designed for interactive use, the initial
-settings can be set programmatically. All of the options described in the
-[heat-tree JavaScript documentation](https://grunwaldlab.github.io/heat-tree/)
-can be used as optional parameters.
-
-```{python}
-heat_tree(
-    tree_path,
-    metadata=meta_path,
-    aesthetics={"tipLabelColor": "host_type"},
-    layout="circular",          # "rectangular" (default) or "circular"
-    branchLengthScale=1.5,      # scale factor for branch lengths
-    treeHeightScale=2.0,        # scale factor for spacing between tips
-    transitionDuration=750,     # animation duration in ms
-)
-```
 
 ## Multiple Trees
 
@@ -178,42 +138,15 @@ heat_tree(
         {"tipLabelText": "strain", "tipLabelColor": "host_type"},
         {"tipLabelText": "strain", "tipLabelColor": "year_isolated"},
         {"tipLabelColor": "Lifestyle"}
-    ]
+    ],
+    treeNames=["Weisberg 2020 MLSA", "Weisberg 2020 BEAST", "Bansal 2021"],
+    manualZoomAndPanEnabled = False
 )
 ```
 
 Use the "Select tree" dropdown in the toolbar's "Data" tab to switch between
 loaded trees.
 
-## Widget Sizing
-
-You can control the size of the widget using the `width` and `height` parameters:
-
-```{python}
-heat_tree(tree_path, width="80%", height="600px")
-```
-
-## Example Data
-
-The package includes example datasets that are automatically available:
-
-```{python}
-from heattree_py import example_data
-
-# List available datasets
-example_data()
-
-# Get path to a specific dataset
-tree_path = example_data("weisberg_2020_mlsa")
-```
-
-Available datasets:
-
-- `weisberg_2020_mlsa` - MLSA phylogeny of agrobacterial strains
-- `weisberg_2020_beast` - BEAST time-calibrated phylogeny
-- `weisberg_2020_metadata` - Metadata for Weisberg trees
-- `bansal_2021_tree` - Core gene phylogeny of Xylella
-- `bansal_2021_metadata` - Metadata for Bansal tree
 
 ## Widget Controls
 

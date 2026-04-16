@@ -7,6 +7,39 @@
   margin-bottom: 2rem;
 }
 
+/* Hero grid layout: 40/60 on desktop, stacked on mobile */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.hero-widget {
+  min-height: 300px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Stack columns on mobile */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-widget {
+    min-height: 350px;
+  }
+}
+
 /* Make the API reference index look nice */
 .quarto-listing .listing-title {
   font-weight: 600;
@@ -20,4 +53,14 @@ pre.sourceCode {
 /* Add some spacing to callouts */
 .callout {
   margin: 1.5rem 0;
+}
+
+.cell-output-display {
+  overflow: visible; !important;
+  overflow-x: visible; !important;
+}
+
+.cell-output-display:not(.no-overflow-x),
+.knitsql-table:not(.no-overflow-x) {
+  overflow: visible; !important;
 }

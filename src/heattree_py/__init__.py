@@ -14,7 +14,7 @@ bundled with each widget or loaded from CDN.
 """
 
 __version__ = "0.1.0"
-HEAT_TREE_JS_VERSION = "0.3.0"
+HEAT_TREE_JS_VERSION = "0.3.1"
 """Version of the ``@grunwaldlab/heat-tree`` npm package used."""
 
 

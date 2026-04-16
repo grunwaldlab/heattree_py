@@ -34,6 +34,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e .
           pip install quartodoc
+          pip install jupyter
 
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2

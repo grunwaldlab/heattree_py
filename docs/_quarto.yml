@@ -9,7 +9,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - getting-started.qmd
+      - href: getting-started.qmd
+        text: Guide
       - examples.qmd
       - href: reference/index.qmd
         text: API Reference
