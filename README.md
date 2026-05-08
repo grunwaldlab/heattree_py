@@ -192,7 +192,7 @@ hatch run fix
 
 Please consider citing: 
 
-> Foster, Zachary SL, Jeff H. Chang, and Niklaus J. Grünwald. 2006. "Heat-tree: Cross-platform software for interactive and embeddable phylogenetic tree visualization and editing." arXiv preprint arXiv:2605.01109
+> Foster, Zachary SL, Jeff H. Chang, and Niklaus J. Grünwald. 2026. "Heat-tree: Cross-platform software for interactive and embeddable phylogenetic tree visualization and editing." arXiv preprint [https://doi.org/10.48550/arXiv.2605.01109](arXiv:2605.01109).
 
 ## License
 
